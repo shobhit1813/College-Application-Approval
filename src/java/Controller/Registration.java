@@ -12,6 +12,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
+import javax.servlet.RequestDispatcher;
 
 
 /**
@@ -61,7 +62,9 @@ public class Registration extends HttpServlet {
             System.out.println("shobhit");
             if(i > 0)
             {
-                out.println("Registration Successfull");
+                //out.println("Registration Successfull");
+                RequestDispatcher rd = request.getRequestDispatcher("/login.html");
+                 rd.forward(request, response);
             }
            
         }
