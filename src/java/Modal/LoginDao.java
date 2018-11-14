@@ -14,12 +14,13 @@ public class LoginDao {
     public static boolean validate(String name,String pass){
        boolean status = false;
        try{
+           System.out.println("name "+name+" pass "+pass);
             Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true");
-            PreparedStatement ps = con.prepareStatement("select * from userreg where name =? and pass =?");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=false&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
+            PreparedStatement ps = con.prepareStatement("select * from userreg where fname =? and pass =?");
             ps.setString(1,name);
             ps.setString(2,pass);
-            
+          
             ResultSet rs = ps.executeQuery();
             status  = rs.next();
        }    
