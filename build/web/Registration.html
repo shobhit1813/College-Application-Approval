@@ -8,7 +8,7 @@
 	
 	<body bgcolor = "black">
         <center><h1><font color = "white">Apply for Exam here</font></h1></center>
-		<FORM method = "post" action = "">
+		<FORM method = "post" action = "Registration">
 			<div class = "Div">
 				<table class = "tbl" cellspacing="10px">
 					<tr><td><font color = "white" ><h7 id = "fnm">First Name</h7></font></td><td><input type = "text" name = "fname" onmouseover="changeFnameInProperty()" onmouseleave="changeFnameOutProperty()" placeholder = "First Name" required></td></tr>
@@ -28,12 +28,12 @@
 					<tr><td><font color = "white"><h7 id = "gen">Gender</h7></font></td>
 						<td onmouseover="changeGenderInProperty()" onmouseleave="changeGenderOutProperty()">
 							<select name = "Gender" >
-								<option value = "Male">Male</option>
-								<option value = "female">Female</option>
+								<option value = "M">Male</option>
+								<option value = "F">Female</option>
 							</select>	
 						</td>
 					</tr>
-					<tr><td><input type = "button" onclick = "validatePass()" value = "Submit" name = "sbtn"></td></tr>
+					<tr><td><input type = "Submit" onclick = "validatePass()" value = "Submit" name = "sbtn"></td></tr>
 				</table>
 			</div>
 		</FORM>	

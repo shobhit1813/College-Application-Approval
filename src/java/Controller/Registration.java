@@ -46,8 +46,8 @@ public class Registration extends HttpServlet {
         try{
             
            Class.forName("com.mysql.cj.jdbc.Driver");
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true");
-            PreparedStatement ps = con.prepareStatement("insert into registeruser values(?,?,?,?,?,?,?,?)");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
+            PreparedStatement ps = con.prepareStatement("insert into userreg values(?,?,?,?,?,?,?,?)");
             ps.setString(1,fn);
             ps.setString(2,ln);
             ps.setString(3,em);
@@ -58,7 +58,7 @@ public class Registration extends HttpServlet {
             ps.setString(8,gen);
             
             int i = ps.executeUpdate();
-            
+            System.out.println("shobhit");
             if(i > 0)
             {
                 out.println("Registration Successfull");
@@ -66,7 +66,7 @@ public class Registration extends HttpServlet {
            
         }
         catch(Exception ex){
-            
+            System.out.print(ex);
         }
         out.close();
     }

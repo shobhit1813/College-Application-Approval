@@ -1,6 +1,6 @@
 .loginform{
 	    float: right;
-		background-color: black;
+		background-color:grey;
 		height: 300px;
 		width : 300px;
 	}
@@ -19,10 +19,10 @@
         width : 300px;
         margin-top: 50px;
         margin-left: 200px;
-        background-color: grey;
+        background-color: #ff9900;
         height: 400px;
         width : 900px;
-        opacity:0.5;
+        opacity:0.75;
     }
 
     .div-two{
