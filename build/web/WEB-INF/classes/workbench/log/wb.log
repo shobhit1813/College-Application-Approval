@@ -1,0 +1,39 @@
+21:42:14 [INF][   WBContext UI]: Initializing workbench context UI with these values:
+	base dir: /usr/share/mysql-workbench
+	plugin path: /usr/lib/mysql-workbench/plugins
+	struct path: /usr/share/mysql-workbench/grt
+	module path: /usr/lib/mysql-workbench/modules
+	library path: /usr/share/mysql-workbench/libraries
+	user data dir: /home/shobhit/.mysql/workbench
+	open at start: 
+	open type: 
+	run at startup: 
+	run type: 
+	Force SW rendering: No
+	Force OpenGL: No
+	quit when done: No
+21:42:14 [INF][      WBContext]: WbContext::init
+21:42:17 [INF][            WBA]: Looking for extension modules for WBA...
+21:42:17 [INF][            WBA]: 0 extension modules found
+21:42:18 [WRN][            grt]: /usr/share/mysql-workbench/modules/data/mysql_rdbms_info.xml:1401: link 'om.mysql.rdbms.mysql.driver.native_sshtun' <object > key=owner could not be resolved
+21:42:18 [INF][      WBContext]: System info:
+ 	MySQL Workbench Community (GPL) for Linux/Unix version 8.0.13 CE build 13780177 (64 bit)
+	Configuration Directory: /home/shobhit/.mysql/workbench
+	Data Directory: /usr/share/mysql-workbench
+	Cairo Version: 1.16.0
+	OS:  x86_64
+	CPU: 8x Intel(R) Core(TM) i5-8250U CPU @ 1.60GHz (2415.168MHz) - 7.66GiB RAM
+No video adapter info available
+	Distribution: Arch Linux
+
+	Fips mode enabled: no
+
+21:42:49 [ERR][SQL Editor Form]: SqlEditorForm: exception in do_connect method: Exception: Can't connect to MySQL server on '127.0.0.1' (111)
+21:42:49 [WRN][SQL Editor Form]: Can't connect to MySQL server on '127.0.0.1' (111)
+21:42:49 [INF][SQL Editor Form]: Error 2003 connecting to server, assuming server is down and opening editor with no connection
+21:42:49 [INF][SQL Editor Form]: Error 2003 connecting to server, assuming server is down and opening editor with no connection
+21:42:50 [INF][  column_widths]: Initializing column width cache for Mysql@127.0.0.1_3306
+21:42:50 [INF][          Admin]: Auto-created instance profile for connection 
+21:42:50 [ERR][wb_admin_control.py:init:307]: Error connecting to MySQL: Can't connect to MySQL server on '127.0.0.1' (111) (code 2003)
+21:42:50 [ERR][wb_admin_control.py:server_polling_thread:561]: Error creating SQL connection for monitoring: MySQLError("Can't connect to MySQL server on '127.0.0.1' (111) (code 2003)",)
+21:42:50 [INF][wb_admin_control.py:query_server_installation_info:860]: Currently connected to MySQL server version 'unknown', conn status = None, active plugins = []

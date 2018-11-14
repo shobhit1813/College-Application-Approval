@@ -1,0 +1,23 @@
+.divh{
+		background-color: #99cc00;
+	}
+	.font{
+		color: white;
+		font-size : 20px;
+	}
+	body{
+		
+		background-color: black;
+	}
+
+	#btn{
+		border-radius: 5px;
+		align-content: right;
+		height: 60px;
+		width: 100px;
+	
+	}
+	
+	#tab{
+		width:1300px;
+	}
