@@ -4,21 +4,19 @@
  * and open the template in the editor.
  */
 package Controller;
-import Modal.LoginDao;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 /**
  *
  * @author shobhit
  */
-public class Login extends HttpServlet {
+public class LogoutServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -32,24 +30,9 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       PrintWriter out = response.getWriter();//PrintWriter object is created by web Container.
-      
-       String n = request.getParameter("nm");
-       String p = request.getParameter("pwd");
-      
-       if(LoginDao.validate(n,p)){
-           
-           HttpSession  session = request.getSession();
-           session.setAttribute("nm", n);
-           
-          RequestDispatcher rd = request.getRequestDispatcher("UserProfile.jsp");
-          rd.forward(request, response);
-        }
-       else{
-           out.print("Sorry username or password wrong");
-          
-       }
-   }     
+       
+    }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
