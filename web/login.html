@@ -1,97 +1,23 @@
-<!Doctype html>
 <html>
-	<title>
-		Login 
-	</title>
-<link rel = "stylesheet" type = "text/css" href = "login.css">
-<script type="text/javascript" src = "login.js"></script>>
-<script>
-
-        var myIndex = 0;
-        carousel();
-
-        function carousel() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}    
-            x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 3000); // Change image every 2 seconds
-        }
-
-</script>
-	<body onload = "startTime()">
-       
-        <div class = "div-one">
-        		<center><h1 id = "header"><font color = "red">CHITKARA UNIVERSITY HIMACHAL PRADESH</font></h1></center>
-
-                <div class = "div-two">
-                    <img class="mySlides" src="pic3.jpg" style="width:100%;height:300px">
-                    <img class="mySlides" src="pic2.jpg" style="width:100% ;height:300px">
-                    <img class="mySlides" src="pic1.jpg" style="width:100% ;height:300px">
-                </div>
-
-    <script type="text/javascript">
-        var myIndex = 0;
-        slideIt();
-
-        function slideIt() {
-            var i;
-            var x = document.getElementsByClassName("mySlides");
-            for (i = 0; i < x.length; i++) {
-               x[i].style.display = "none";  
-            }
-            myIndex++;
-            if (myIndex > x.length) {myIndex = 1}    
-            x[myIndex-1].style.display = "block";  
-            setTimeout(carousel, 2000); // Change image every 2 seconds
-        }
-
-    </script>
-
-        		<FORM method = "post" action = "Login"> 
-        			<div class = "loginform">
-        				<table cellspacing="10px">
-
-        				<tr><td><font color= "white"><h7 id = "usr">User Name</h7></font></td><td><input type = "text" name = "nm" id = "name" placeholder="UserName" onmouseover="changeUserInProperty()" onmouseleave = "changeUserOutProperty()" required></td></tr><br>
-•••
-        				<tr><td><font color = "white"><h7 id = "ps">Password</h7></font></td><td><input type = "password" name = "pwd" id = "pwd" placeholder="Password" onmouseover="changePassInProperty()" onmouseleave = "changePassOutProperty()" required></td></tr>
-
-        				<tr><td><font color = "white">Branch</font></td>
-        					<td>
-        						<select name="Branch">
-        						<option value = "cse">CSE</option>
-        						<option value = "ece">ECE</option>
-        						<option vlaue = "civil">Civil</option>	
-                            </select>
-        					</td>
-        				</tr>
-        				<tr></tr>
-        				<tr></tr>
-        				<tr></tr>
-        				<tr></tr>
-        				<tr></tr>
-        				<tr><td><font color = "white">Session</font></td>
-        					<td>
-        						<select name="Year">
-        						<option value = "1617">2016-2017</option>
-        						<option value = "1718">2017-2018</option>
-        						<option vlaue = "1819">2018-2019</option>
-                                </select>	
-        					</td>
-        				</tr>
-        				<tr></tr>
-        				<tr></tr>
-        				<tr></tr>
-        				<tr></tr>
-        				<tr><td><input type = "Submit" name = "btn" value = "Submit" color = "red" class = "btn"></td></tr>
-
-        				</table>
-        			</div>
-		</FORM> 
+<head>
+<title>Login Form Design</title>
+    <link rel="stylesheet" type="text/css" href="login.css">
+<body>
+    <div class="loginbox">
+    <img src="avatar.png" class="avatar">
+        <h1>Login Here</h1>
+        <form action = "Login" method = "post">
+            <p>Username</p>
+            <input type="text" name="nm" placeholder="Enter Username">
+            <p>Password</p>
+            <input type="password" name="pwd" placeholder="Enter Password">
+            <input type="submit" name="" value="Login">
+            <a href="#">Lost your password?</a><br>
+            <a href="Registration.html">Don't have an account?</a>
+        </form>
+        
     </div>
-	</body>
+
+</body>
+</head>
 </html>
