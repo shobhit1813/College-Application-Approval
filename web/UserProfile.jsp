@@ -1,12 +1,11 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-   response.setHeader("Cache-Control","no-store"); //HTTP 1.1 
-   response.setHeader("Cache-Control","no-cache"); 
-   response.setHeader("Pragma","no-cache"); //HTTP 1.0 
-   response.setDateHeader ("Expires", 0); 
-  
+   response.setHeader("Cache-Control","no-store,no-cache,must-revalidate"); //HTTP 1.1 
+ 
+   
    if(session.getAttribute("nm") == null){
-       response.sendRedirect("login.html");
+        RequestDispatcher rd = request.getRequestDispatcher("login.html");
+        rd.forward(request, response);
    }
    HttpSession nsession = request.getSession(false);
    if(nsession != null){
@@ -31,12 +30,16 @@
                    request.getSession().getAttribute("nm").toString()
                 %>
             </font>
-            <a href ="login.html" id = "a">LogOut</a>
+            <form action = "LogoutServlet" method = "post">
+                <input type = "Submit" value = "LogOut">
+            </form>
         </div>
     </body>
 </html>
 <%}
     else{
-       response.sendRedirect("login.html");
-}
+         RequestDispatcher rd = request.getRequestDispatcher("login.html");
+          rd.forward(request, response);
+}   
+    session.invalidate();
 %>

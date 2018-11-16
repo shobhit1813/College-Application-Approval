@@ -43,7 +43,7 @@ public class Login extends HttpServlet {
            session.setAttribute("nm", n);
            
           RequestDispatcher rd = request.getRequestDispatcher("UserProfile.jsp");
-          rd.forward(request, response);
+          rd.forward(request, response); 
         }
        else{
            out.print("Sorry username or password wrong");
