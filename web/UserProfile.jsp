@@ -23,15 +23,15 @@
              width:100px;
         }
         body{
-            background-image :linear-gradient(75deg,red,black);
-            
+            background-image :linear-gradient(25deg,white,black);
         }
         #user{
             width:350px;
             margin-top:20px;
             margin-left:600px;
             height:500px;
-            background-image: linear-gradient(75deg,yellow,green);
+            background-image: linear-gradient(75deg,red,yellow);
+            box-shadow: 10px 5px 5px black;
         }
         #profile{
             float:left;
@@ -39,7 +39,10 @@
             margin-left:300px;
             width:300px;
             height:500px;
-            background-image:url("shobhit.jpg");
+            background-image: url("divuser.jpg");
+            background-size: 300px 500px;
+            box-shadow:10px 2px 12px black;
+            opacity:0.6;
         }
    
  
@@ -75,6 +78,11 @@
 #user.username font.usename_in{
     margin-left: 1000px;
 }
+#avtardiv{
+    border-radius: 50%;
+    background-color: yellow;
+    background-size: 100px 100px;
+}
     </style>
     <body>
         <div class = "topnav">
@@ -84,7 +92,9 @@
             <a href ="UserProfile.jsp">Back</a>
         </div>
          <div id = "profile">
-             
+             <div id ="avtardiv">
+                 
+             </div>
          </div>
         <div id = "user">
             <font class = "username">
