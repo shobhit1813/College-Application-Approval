@@ -22,6 +22,9 @@
              text-decoration: none;
              width:100px;
         }
+        body{
+            background-image :gradient
+        }
     </style>
     <body>
         <div>
@@ -37,9 +40,5 @@
     </body>
 </html>
 <%}
-    else{
-         RequestDispatcher rd = request.getRequestDispatcher("login.html");
-          rd.forward(request, response);
-}   
-    session.invalidate();
+   
 %>

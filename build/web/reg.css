@@ -5,19 +5,18 @@
 			padding: 20px;
 			border: 2px solid black;
 			border-radius: 10px;
-			border-color: red;
-			background-color: black;
+			border-color: gray;
 			width : 300px;
-			margin-top: 80px;
+			background-image: linear-gradient(90deg,rgba(255,0,0,0.6),rgba(0,0,0,0.7));
+                        margin-top: 60px;
 			margin-left: 800px;
 		}
 
-		.tbl{
-
-		}
-
 		body{
-			background-image: url("edu4.jpg");
+			background-image: url("regi.jpg");
 			background-repeat: no-repeat;
+                        background-size:1400px 800px;
+                        opacity: 0.5px;
+                        
 		}
 
