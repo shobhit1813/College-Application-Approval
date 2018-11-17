@@ -31,7 +31,7 @@
             margin-top:20px;
             margin-left:600px;
             height:500px;
-            background-image: linear-gradient(75deg,grey,white);
+            background-image: linear-gradient(75deg,yellow,green);
         }
         #profile{
             float:left;

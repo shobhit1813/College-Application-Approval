@@ -1,5 +1,7 @@
 .divh{
 		background-color: #99cc00;
+		background-image: linear-gradient(5deg,red,black);
+		opacity: 0.7px;
 	}
 	.font{
 		color: white;
@@ -7,17 +9,21 @@
 	}
 	body{
 		
-		background-color: black;
+		background-image: url("edu6.jpeg");
+		background-size: 1400px 1000px;
 	}
 
 	#btn{
-		border-radius: 5px;
-		align-content: right;
-		height: 60px;
-		width: 100px;
-	
+
+	    background-color:transparent;
+	    background-repeat:no-repeat;
+	    border: none;
+	    cursor:pointer;
+	    overflow: hidden;
+    	outline:none;	
+    	color:white;
 	}
 	
 	#tab{
-		width:1300px;
+		width:1450px;
 	}

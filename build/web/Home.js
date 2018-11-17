@@ -1,7 +1,8 @@
-function loadLogin(){
-		window.location = "login.html"
+	function loadLogin(){
+		window.location = "login.html";
 	}
 
 	function loadReg(){
-		window.location = "Registration.html"
+		window.location = "Registration.html";
 	}
+	
