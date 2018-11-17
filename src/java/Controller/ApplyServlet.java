@@ -7,19 +7,18 @@ package Controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.DriverManager;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.sql.*;
 import javax.servlet.RequestDispatcher;
-
-
 /**
  *
  * @author shobhit
  */
-public class Registration extends HttpServlet {
+public class ApplyServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,45 +32,31 @@ public class Registration extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        
-        String fn = request.getParameter("fname");
-        String ln = request.getParameter("lname");
-        String em = request.getParameter("email");
-        String pass = request.getParameter("pass");
-        String cpass = request.getParameter("cpass");
-        String city = request.getParameter("city");
-        String mobile = request.getParameter("mbno");
-        String gen = request.getParameter("Gender");
-        
-        try{
-            
+       PrintWriter out = response.getWriter();
+       String fatherName = request.getParameter("ftnm");
+       String fatherOccupation = request.getParameter("ftoccp");
+       String cgpa = request.getParameter("cgpa");
+       String twelth = request.getParameter("twno");
+       try{
            Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
-            PreparedStatement ps = con.prepareStatement("insert into userreg values(?,?,?,?,?,?,?,?)");
-            ps.setString(1,fn);
-            ps.setString(2,ln);
-            ps.setString(3,em);
-            ps.setString(4,pass);
-            ps.setString(5,cpass);
-            ps.setString(6,city);
-            ps.setString(7,mobile);
-            ps.setString(8,gen);
-            
-            int i = ps.executeUpdate();
-            //System.out.println("shobhit");
-            if(i > 0)
-            {
-                //out.println("Registration Successfull");
-                RequestDispatcher rd = request.getRequestDispatcher("/personal_Detail.html");
-                 rd.forward(request, response);
-            }
+           PreparedStatement ps = con.prepareStatement("insert into personal values(?,?,?,?)");
+           ps.setString(1,fatherName);
+           ps.setString(2, fatherOccupation);
+           ps.setString(3,cgpa);
+           ps.setString(4,twelth);  
            
+           int i = ps.executeUpdate();
+           if(i > 0){
+               System.out.println("sinha");
+               //out.print("<script>window.alert()<script>");
+               RequestDispatcher rd = request.getRequestDispatcher("/login.html");
+               rd.forward(request,response);
+           }
+       }
+       catch(Exception e){
+           System.out.println(e);
         }
-        catch(Exception ex){
-            System.out.print(ex);
-        }
-        out.close();
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
