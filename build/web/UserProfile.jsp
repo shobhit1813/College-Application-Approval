@@ -18,20 +18,25 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <style>
+        .tb{
+            
+        }
         #a{
              text-decoration: none;
              width:100px;
         }
         body{
-            background-color:grey;
+            background-image:url("pers.jpeg");
+            background-size: 1400px 800px;
+            
         }
         #user{
             width:350px;
             margin-top:20px;
             margin-left:600px;
             height:500px;
-            background-image: linear-gradient(75deg,red,yellow);
-            box-shadow: 5px 5px #4d4d4d;
+            background-image: linear-gradient(75deg,red,white);
+            box-shadow: 5px 5px black;
         }
         #profile{
             float:left;
@@ -104,7 +109,7 @@ img{
              <font class = "username">
          </div>
         <div id = "user">
-            <table> 
+            <table class = "tb"> 
                <tr>
                    <td>     
                         <p class ="username_in" text> <%=
