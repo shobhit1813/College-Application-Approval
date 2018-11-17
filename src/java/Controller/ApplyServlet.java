@@ -37,14 +37,16 @@ public class ApplyServlet extends HttpServlet {
        String fatherOccupation = request.getParameter("ftoccp");
        String cgpa = request.getParameter("cgpa");
        String twelth = request.getParameter("twno");
+       String userName = request.getParameter("usnm");
        try{
            Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
-           PreparedStatement ps = con.prepareStatement("insert into personal values(?,?,?,?)");
+           PreparedStatement ps = con.prepareStatement("insert into personal values(?,?,?,?,?)");
            ps.setString(1,fatherName);
            ps.setString(2, fatherOccupation);
            ps.setString(3,cgpa);
            ps.setString(4,twelth);  
+           ps.setString(5,userName);
            
            int i = ps.executeUpdate();
            if(i > 0){

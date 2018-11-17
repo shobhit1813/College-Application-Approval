@@ -11,15 +11,12 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import java.sql.*;
-import javax.servlet.RequestDispatcher;
-
 
 /**
  *
  * @author shobhit
  */
-public class Registration extends HttpServlet {
+public class imgServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,46 +30,9 @@ public class Registration extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
         
-        String fn = request.getParameter("fname");
-        String ln = request.getParameter("lname");
-        String em = request.getParameter("email");
-        String pass = request.getParameter("pass");
-        String cpass = request.getParameter("cpass");
-        String city = request.getParameter("city");
-        String mobile = request.getParameter("mbno");
-        String gen = request.getParameter("Gender");
-        request.setAttribute("Username",fn);
-        try{
-            
-           Class.forName("com.mysql.cj.jdbc.Driver");
-           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
-            PreparedStatement ps = con.prepareStatement("insert into userreg values(?,?,?,?,?,?,?,?)");
-            ps.setString(1,fn);
-            ps.setString(2,ln);
-            ps.setString(3,em);
-            ps.setString(4,pass);
-            ps.setString(5,cpass);
-            ps.setString(6,city);
-            ps.setString(7,mobile);
-            ps.setString(8,gen);
-            
-            int i = ps.executeUpdate();
-            //System.out.println("shobhit");
-            if(i > 0)
-            {
-                //out.println("Registration Successfull");
-                RequestDispatcher rd = request.getRequestDispatcher("/personal_Detail.jsp");
-                 rd.forward(request, response);
-            }
-           
-        }
-        catch(Exception ex){
-            System.out.print(ex);
-        }
-        out.close();
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

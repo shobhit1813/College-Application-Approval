@@ -16,7 +16,7 @@
             }
          .loginbox{
                     width: 320px;
-                    height: 420px;
+                    height: 500px;
                     background: #000;
                     color: #fff;
                     top: 50%;
@@ -65,13 +65,17 @@
            
 </style>
 <script>
-            
+            function disableUserName(){
+                document.getElementById("un").disabled = true;
+            }
 </script>
-<body>
+<body onload = "disableUserName()">
     <div class="loginbox">
         <img src = "avtar2.png" class = "avatar">
         <form action = "ApplyServlet" method = "post">
            <table>
+               <p>UserName</p>
+               <input type="text" name = "usnm" id = "un" value= <% out.print(request.getAttribute("Username")); %> >
                 <p>Father's Name</p>
                 <input type="text" name="ftnm" placeholder="Enter Username" required>
                 <p>Father's occupation</p>
