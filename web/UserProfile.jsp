@@ -23,7 +23,7 @@
              width:100px;
         }
         body{
-            background-image :linear-gradient(25deg,white,black);
+            background-color:grey;
         }
         #user{
             width:350px;
@@ -31,7 +31,7 @@
             margin-left:600px;
             height:500px;
             background-image: linear-gradient(75deg,red,yellow);
-            box-shadow: 10px 5px 5px black;
+            box-shadow: 5px 5px #4d4d4d;
         }
         #profile{
             float:left;
@@ -41,8 +41,7 @@
             height:500px;
             background-image: url("divuser.jpg");
             background-size: 300px 500px;
-            box-shadow:10px 2px 12px black;
-            opacity:0.6;
+             box-shadow: 0px 5px #4d4d4d;
         }
    
  
@@ -79,9 +78,14 @@
     margin-left: 1000px;
 }
 #avtardiv{
-    border-radius: 50%;
+    border-radius: 100%;
     background-color: yellow;
-    background-size: 100px 100px;
+    background-size: 30px 30px;
+}
+img{
+    border-radius:25%;
+    margin-left: 100px;
+    margin-top: 100px;
 }
     </style>
     <body>
@@ -92,9 +96,7 @@
             <a href ="UserProfile.jsp">Back</a>
         </div>
          <div id = "profile">
-             <div id ="avtardiv">
-                 
-             </div>
+             <img src = "shobhit.jpg" style="width:100px">
          </div>
         <div id = "user">
             <font class = "username">
