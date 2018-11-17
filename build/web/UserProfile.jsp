@@ -84,7 +84,11 @@
 }
 img{
     border-radius:25%;
-    margin-left: 100px;
+    margin-left: 50px;
+    margin-top: 100px;
+}
+.usename_in{
+    top: -40;
     margin-top: 100px;
 }
     </style>
@@ -96,14 +100,21 @@ img{
             <a href ="UserProfile.jsp">Back</a>
         </div>
          <div id = "profile">
-             <img src = "shobhit.jpg" style="width:100px">
+             <img src = "shobhit.jpg" style="width:200px">
+             <font class = "username">
          </div>
         <div id = "user">
-            <font class = "username">
-            UserName:<font class = "unsername_in"> <%=
-                   request.getSession().getAttribute("nm").toString()
-                %>
-            </font>
+            <table> 
+               <tr>
+                   <td>     
+                        <p class ="username_in" text> <%=
+                                     request.getSession().getAttribute("nm").toString()
+                                 %>
+                        </p>
+                   </td>             
+                </tr>    
+                </p>
+           </table>
         </div>
 
     </body>
