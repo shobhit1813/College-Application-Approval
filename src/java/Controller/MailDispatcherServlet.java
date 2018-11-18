@@ -44,6 +44,7 @@ public class MailDispatcherServlet extends HttpServlet {
             boolean i = rs.next();
             if(i){
                EmailHandler.mailHandler(toEmail);
+               
                 
             }
             else{
