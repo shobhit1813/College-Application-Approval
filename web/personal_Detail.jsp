@@ -69,17 +69,17 @@
                 document.getElementById("un").disabled = true;
             }
 </script>
-<body onload = "disableUserName()">
+<body>
     <div class="loginbox">
         <img src = "avtar2.png" class = "avatar">
         <form action = "ApplyServlet" method = "post">
            <table>
                <p>UserName</p>
-               <input type="text" name = "usnm" id = "un" value= <% out.print(request.getAttribute("Username")); %> >
+               <input type="text" name = "usnm" id = "un" value = <% out.print(request.getAttribute("Username")); %> onmouseover= "disableUserName()">
                 <p>Father's Name</p>
                 <input type="text" name="ftnm" placeholder="Enter Username" required>
-                <p>Father's occupation</p>
-                <select name = "ftoccp">
+                <p>Father's occupation</p> 
+               <select name = "ftoccp">
                     <option value = "Business">Business</option>
                     <option value = "Govt">Govt job</option>
                     <option value = "Private">Private job</option>

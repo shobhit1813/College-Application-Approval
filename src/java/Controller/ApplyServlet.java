@@ -38,6 +38,7 @@ public class ApplyServlet extends HttpServlet {
        String cgpa = request.getParameter("cgpa");
        String twelth = request.getParameter("twno");
        String userName = request.getParameter("usnm");
+       System.out.println("Username "+userName);
        try{
            Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");

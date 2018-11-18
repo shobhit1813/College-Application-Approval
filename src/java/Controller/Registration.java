@@ -43,7 +43,6 @@ public class Registration extends HttpServlet {
         String city = request.getParameter("city");
         String mobile = request.getParameter("mbno");
         String gen = request.getParameter("Gender");
-        request.setAttribute("Username",fn);
         try{
             
            Class.forName("com.mysql.cj.jdbc.Driver");
@@ -62,7 +61,7 @@ public class Registration extends HttpServlet {
             //System.out.println("shobhit");
             if(i > 0)
             {
-                //out.println("Registration Successfull");
+                request.setAttribute("Username",fn);
                 RequestDispatcher rd = request.getRequestDispatcher("/personal_Detail.jsp");
                  rd.forward(request, response);
             }

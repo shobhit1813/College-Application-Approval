@@ -5,10 +5,11 @@
         <group>
             <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/web/Registration.html</file>
             <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/src/java/Controller/ApplyServlet.java</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/src/java/Controller/imgServlet.java</file>
             <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/web/login.css</file>
             <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/src/java/Controller/Registration.java</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/web/personal_Detail.html</file>
             <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/web/UserProfile.jsp</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/web/personal_Detail.jsp</file>
         </group>
     </open-files>
 </project-private>
