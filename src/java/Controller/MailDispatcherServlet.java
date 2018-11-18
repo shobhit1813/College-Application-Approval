@@ -4,11 +4,15 @@
  * and open the template in the editor.
  */
 package Controller;
-import Modal.*;
+import Modal.EmailHandler;
+import Modal.SendEmailDao;
 import java.sql.*;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.DriverManager;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.mail.MessagingException;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -29,20 +33,14 @@ public class MailDispatcherServlet extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
+     * @throws javax.mail.MessagingException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, RuntimeException, MessagingException {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
         String toEmail = request.getParameter("email");
-        try{
-            Class.forName("com.mysql.cj.jdbc.Driver");
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
-            Statement st = con.createStatement();
-            String q = "SELECT pass FROM userreg where email='"+toEmail+"'";
-            ResultSet rs = st.executeQuery(q);
-            boolean i = rs.next();
-            if(i){
+            if(SendEmailDao.checkEmail(toEmail)){
                EmailHandler.mailHandler(toEmail);
                
                 
@@ -50,10 +48,7 @@ public class MailDispatcherServlet extends HttpServlet {
             else{
                 out.println("Invalid Email Id");
             }
-        }
-        catch(Exception e){
-            System.out.println(e);
-        }
+        
     
     }
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -68,7 +63,13 @@ public class MailDispatcherServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (RuntimeException ex) {
+            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MessagingException ex) {
+            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -82,7 +83,13 @@ public class MailDispatcherServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (RuntimeException ex) {
+            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (MessagingException ex) {
+            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
