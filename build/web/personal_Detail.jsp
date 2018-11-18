@@ -65,9 +65,7 @@
            
 </style>
 <script>
-            function disableUserName(){
-                document.getElementById("un").disabled = true;
-            }
+            
 </script>
 <body>
     <div class="loginbox">
@@ -75,7 +73,7 @@
         <form action = "ApplyServlet" method = "post">
            <table>
                <p>UserName</p>
-               <input type="text" name = "usnm" id = "un" value = <% out.print(request.getAttribute("Username")); %> onmouseover= "disableUserName()">
+               <input type="text" name = "usnm" id = "un" value = <% out.print(request.getAttribute("Username")); %>>
                 <p>Father's Name</p>
                 <input type="text" name="ftnm" placeholder="Enter Username" required>
                 <p>Father's occupation</p> 

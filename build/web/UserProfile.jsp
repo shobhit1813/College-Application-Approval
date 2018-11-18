@@ -35,7 +35,7 @@
             margin-top:20px;
             margin-left:600px;
             height:500px;
-            background-image: linear-gradient(75deg,red,white);
+            background-image: linear-gradient(50deg,red,black);
             box-shadow: 5px 5px black;
         }
         #profile{
@@ -52,7 +52,11 @@
  
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: black;
+  margin-top:-10px;
+  margin-left:  -8px;
+  
+  opacity:0.7;
 }
 
 .topnav a {
@@ -70,8 +74,8 @@
 }
 
 .topnav a.active {
-  background-color: #4CAF50;
-  color: white;
+  background-color: greenyellow;
+  color: brown;
 }
 #user font.username{
     font-family: "Times Header";
@@ -104,6 +108,7 @@ img{
             <a href =" ">Counseling</a>
             <a href ="UserProfile.jsp">Back</a>
         </div>
+        
          <div id = "profile">
              <img src = "shobhit.jpg" style="width:200px">
              <font class = "username">
