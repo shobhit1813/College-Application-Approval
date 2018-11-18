@@ -4,6 +4,7 @@
  * and open the template in the editor.
  */
 package Controller;
+import Modal.*;
 import java.sql.*;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -42,6 +43,7 @@ public class MailDispatcherServlet extends HttpServlet {
             ResultSet rs = st.executeQuery(q);
             boolean i = rs.next();
             if(i){
+               EmailHandler.mailHandler(toEmail);
                 
             }
             else{

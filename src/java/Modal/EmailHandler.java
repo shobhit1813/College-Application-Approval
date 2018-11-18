@@ -5,6 +5,7 @@
  */
 package Modal;
 
+import java.util.Random;
 import javax.mail.MessagingException;
 
 /**
@@ -14,15 +15,26 @@ import javax.mail.MessagingException;
 public class EmailHandler {
     
     final static String from = "ssinha.cse16@chitkarauniversity.edu.in";
-    final static String to = "saurabhsinghal998@gmail.com";
+    static String to = " ";
     final static String pass ="$$shobhitsinha$$";
     final static String sub = "verification code";
-    final static String msg = "1234";
+    static String msg = " ";
 //   public static void handler(String from,String to,String pass,String sub,String msg) throws RuntimeException, MessagingException{
 //     
 //       SendMail.sendmail(from, to, sub, pass, msg);
 //   }
-    public static void main(String []args) throws RuntimeException, MessagingException{
+    public EmailHandler(String userEmail){
+            to = userEmail;
+    }
+    public static String genMsg(){
+        int token;
+        Random rand = new Random();
+        token = (int)(Math.random() * 49586 + 1); 
+        return (token+"");
+    }
+    public static void mailHandler(String userEmail) throws RuntimeException, MessagingException{
+        EmailHandler eh = new EmailHandler(userEmail);
+        msg = genMsg();
         SendMail.sendmail(from, to, sub, pass, msg);
     }
     
