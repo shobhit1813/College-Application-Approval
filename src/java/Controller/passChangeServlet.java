@@ -4,16 +4,12 @@
  * and open the template in the editor.
  */
 package Controller;
-import Modal.EmailHandler;
-import Modal.SendEmailDao;
-import Modal.VerificatonUpdateEmailTable;
-import java.sql.*;
+
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
 import java.sql.DriverManager;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.mail.MessagingException;
+import java.sql.PreparedStatement;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
@@ -24,8 +20,7 @@ import javax.servlet.http.HttpServletResponse;
  *
  * @author shobhit
  */
-
-public class MailDispatcherServlet extends HttpServlet {
+public class passChangeServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,29 +30,32 @@ public class MailDispatcherServlet extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
-     * @throws javax.mail.MessagingException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException, RuntimeException, MessagingException, SQLException {
+            throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        PrintWriter out = response.getWriter();
-        String toEmail = request.getParameter("email");
-        
-        request.setAttribute("email",toEmail);
-        
-        System.out.println(toEmail);
-            if(SendEmailDao.checkEmail(toEmail)){
-              String msg = EmailHandler.mailHandler(toEmail);
-              VerificatonUpdateEmailTable.updateToken(toEmail,msg); 
-              RequestDispatcher rd = request.getRequestDispatcher("/Verify.jsp");
-              rd.forward(request, response);
+        PrintWriter out  = response.getWriter();
+        String npass = request.getParameter("npass");
+        String cnpass = request.getParameter("cnpass");
+        String email = request.getParameter("vemail");
+        try{
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
+            PreparedStatement ps = con.prepareStatement("update userreg where email =? set pass=? and cpass=?");
+            ps.setString(1,email);
+            ps.setString(2,npass);
+            ps.setString(3,cnpass);
+            int i = ps.executeUpdate();
+            if(i > 0){
+                RequestDispatcher rd = request.getRequestDispatcher("/login.html");
+                rd.forward(request, response);
             }
-            else{
-                out.println("Invalid Email Id");
-            }
-        
-    
+        }
+        catch(Exception e){
+            
+        }
     }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.
@@ -70,15 +68,7 @@ public class MailDispatcherServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (RuntimeException ex) {
-            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (MessagingException ex) {
-            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**
@@ -92,15 +82,7 @@ public class MailDispatcherServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        try {
-            processRequest(request, response);
-        } catch (RuntimeException ex) {
-            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (MessagingException ex) {
-            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
-        } catch (SQLException ex) {
-            Logger.getLogger(MailDispatcherServlet.class.getName()).log(Level.SEVERE, null, ex);
-        }
+        processRequest(request, response);
     }
 
     /**

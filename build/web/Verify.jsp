@@ -19,8 +19,12 @@ and open the template in the editor.
     </script>
     <body>
         <div>
-            <form  method = "post" action = "">
+            <form  method = "post" action = "passChangeServlet">
                 <table>
+                    <tr>
+                        <td><p>Email</p></td>
+                        <td><input type = "text" name = "vemail" value = "<% out.print(request.getAttribute("email")); %>"></td>
+                    </tr>
                     <tr>
                         <td><p>Enter Token</p></td>
                         <td><input type = "submit" value = "Submit"></td>

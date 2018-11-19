@@ -35,6 +35,14 @@
         <servlet-name>UpdateEmailTable</servlet-name>
         <servlet-class>Controller.UpdateEmailTable</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>verifyServlet</servlet-name>
+        <servlet-class>Controller.verifyServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>passChangeServlet</servlet-name>
+        <servlet-class>Controller.passChangeServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -66,6 +74,14 @@
     <servlet-mapping>
         <servlet-name>UpdateEmailTable</servlet-name>
         <url-pattern>/UpdateEmailTable</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>verifyServlet</servlet-name>
+        <url-pattern>/verifyServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>passChangeServlet</servlet-name>
+        <url-pattern>/passChangeServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
