@@ -32,10 +32,11 @@ public class EmailHandler {
         token = (int)(Math.random() * 49586 + 1); 
         return (token+"");
     }
-    public static void mailHandler(String userEmail) throws RuntimeException, MessagingException{
+    public static String mailHandler(String userEmail) throws RuntimeException, MessagingException{
         EmailHandler eh = new EmailHandler(userEmail);
         msg = genMsg();
         SendMail.sendmail(from, to, sub, pass, msg);
+        return msg;
     }
     
 }

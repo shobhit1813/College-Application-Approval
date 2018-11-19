@@ -43,11 +43,12 @@ public class Registration extends HttpServlet {
         String city = request.getParameter("city");
         String mobile = request.getParameter("mbno");
         String gen = request.getParameter("Gender");
+        String token = request.getParameter("token");
         try{
             
            Class.forName("com.mysql.cj.jdbc.Driver");
            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
-            PreparedStatement ps = con.prepareStatement("insert into userreg values(?,?,?,?,?,?,?,?)");
+            PreparedStatement ps = con.prepareStatement("insert into userreg values(?,?,?,?,?,?,?,?,?)");
             ps.setString(1,fn);
             ps.setString(2,ln);
             ps.setString(3,em);
@@ -56,6 +57,7 @@ public class Registration extends HttpServlet {
             ps.setString(6,city);
             ps.setString(7,mobile);
             ps.setString(8,gen);
+            ps.setString(9,token);
             
             int i = ps.executeUpdate();
             //System.out.println("shobhit");

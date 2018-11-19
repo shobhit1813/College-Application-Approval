@@ -31,6 +31,10 @@
         <servlet-name>MailDispatcherServlet</servlet-name>
         <servlet-class>Controller.MailDispatcherServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>UpdateEmailTable</servlet-name>
+        <servlet-class>Controller.UpdateEmailTable</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -58,6 +62,10 @@
     <servlet-mapping>
         <servlet-name>MailDispatcherServlet</servlet-name>
         <url-pattern>/MailDispatcherServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UpdateEmailTable</servlet-name>
+        <url-pattern>/UpdateEmailTable</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
