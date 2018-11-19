@@ -19,7 +19,7 @@ and open the template in the editor.
     </script>
     <body>
         <div>
-            <form  method = "post" action = "passChangeServlet">
+            <form  method = "post" action = "verifyServlet">
                 <table>
                     <tr>
                         <td><p>Email</p></td>
@@ -27,6 +27,7 @@ and open the template in the editor.
                     </tr>
                     <tr>
                         <td><p>Enter Token</p></td>
+                        <td><input type = "text" name = ""></td>
                         <td><input type = "submit" value = "Submit"></td>
                     </tr>
                     <div id = "hide">
@@ -34,9 +35,7 @@ and open the template in the editor.
                            <td>
                                <p>New Password</p>
                            </td>
-                           <td><td>
-
-                            </td>
+                           <td>
                                 <input type = "text" name = "npass">
                            </td>
                         </tr>

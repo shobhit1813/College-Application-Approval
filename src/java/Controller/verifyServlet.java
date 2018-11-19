@@ -45,8 +45,18 @@ public class verifyServlet extends HttpServlet {
             ps.setString(1,otp);
             ResultSet rs = ps.executeQuery();
             if(rs.next()){
-                RequestDispatcher rd = request.getRequestDispatcher("/changePass.jsp");
-                rd.forward(request, response);
+                 String npass = request.getParameter("npass");
+                 String cnpass = request.getParameter("cnpass");
+                 String email = request.getParameter("vemail");
+               PreparedStatement psd = con.prepareStatement("update userreg where email =? set pass=? and cpass=?");
+               psd.setString(1,email);
+               psd.setString(2,npass);
+               psd.setString(3,cnpass);
+               int i = psd.executeUpdate();
+               if(i > 0){
+                 RequestDispatcher rd = request.getRequestDispatcher("/login.html");
+                 rd.forward(request, response);
+                }
             }
         }
         catch(Exception e){

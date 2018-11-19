@@ -11,6 +11,36 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-        <div>TODO write content</div>
+        
+       <div>
+           <form action = "passChangeServlet" method = "post">
+                    <table>
+                        <tr>
+                            <td>Email</td>
+                            <td><input type = "text" name = "vemail" value = "<% out.print(request.getAttribute("email"));%>"></td>
+                        </tr>
+                        <tr>
+                           <td>
+                               <p>New Password</p>
+                           </td>
+                           <td>
+                                <input type = "text" name = "npass">
+                           </td>
+                        </tr>
+                            <td>
+                                <p>Confirm New Password</p> 
+                            </td>
+                            <td>
+                                <input type = "text" name = "cnpass">
+                            </td>
+                        <tr>
+                        <tr>
+                            <input type = "submit" value = "Change">
+                        </tr>
+                            
+                        </tr>
+                   </table>
+           </form>
+        </div>
     </body>
 </html>
