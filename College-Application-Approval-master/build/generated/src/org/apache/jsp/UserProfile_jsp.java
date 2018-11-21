@@ -79,7 +79,7 @@ public final class UserProfile_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            margin-top:20px;\n");
       out.write("            margin-left:600px;\n");
       out.write("            height:500px;\n");
-      out.write("            background-image: linear-gradient(75deg,red,white);\n");
+      out.write("            background-image: linear-gradient(50deg,red,black);\n");
       out.write("            box-shadow: 5px 5px black;\n");
       out.write("        }\n");
       out.write("        #profile{\n");
@@ -96,7 +96,11 @@ public final class UserProfile_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write(" \n");
       out.write(".topnav {\n");
       out.write("  overflow: hidden;\n");
-      out.write("  background-color: #333;\n");
+      out.write("  background-color: black;\n");
+      out.write("  margin-top:-10px;\n");
+      out.write("  margin-left:  -8px;\n");
+      out.write("  \n");
+      out.write("  opacity:0.7;\n");
       out.write("}\n");
       out.write("\n");
       out.write(".topnav a {\n");
@@ -114,8 +118,8 @@ public final class UserProfile_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("}\n");
       out.write("\n");
       out.write(".topnav a.active {\n");
-      out.write("  background-color: #4CAF50;\n");
-      out.write("  color: white;\n");
+      out.write("  background-color: greenyellow;\n");
+      out.write("  color: brown;\n");
       out.write("}\n");
       out.write("#user font.username{\n");
       out.write("    font-family: \"Times Header\";\n");
@@ -148,6 +152,7 @@ public final class UserProfile_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("            <a href =\" \">Counseling</a>\n");
       out.write("            <a href =\"UserProfile.jsp\">Back</a>\n");
       out.write("        </div>\n");
+      out.write("        \n");
       out.write("         <div id = \"profile\">\n");
       out.write("             <img src = \"shobhit.jpg\" style=\"width:200px\">\n");
       out.write("             <font class = \"username\">\n");
@@ -171,7 +176,9 @@ public final class UserProfile_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </body>\n");
       out.write("</html>\n");
 }
-   
+else{
+    System.out.println("Cannot Access");
+} 
 
       out.write('\n');
     } catch (Throwable t) {
