@@ -35,7 +35,7 @@
             margin-top:20px;
             margin-left:600px;
             height:500px;
-            background-image: linear-gradient(50deg,red,black);
+            background-image: linear-gradient(50deg,white,black);
             box-shadow: 5px 5px black;
         }
         #profile{
@@ -55,7 +55,7 @@
   background-color: black;
   margin-top:-10px;
   margin-left:  -8px;
-  
+  width:100vw;
   opacity:0.7;
 }
 
@@ -100,6 +100,13 @@ img{
     top: -40;
     margin-top: 100px;
 }
+.user{
+    margin-left: 1200px;
+}
+form{
+    margin-left:1270px;
+    margin-top: -40px;
+}
     </style>
     <body>
         <div class = "topnav">
@@ -107,6 +114,12 @@ img{
             <a href ="Apply.html">Applied for</a>
             <a href =" ">Counseling</a>
             <a href ="UserProfile.jsp">Back</a>
+            <p class = "user"><font color="red"><%= 
+                request.getSession().getAttribute("nm").toString()
+                %></font></p>
+            <form  id = "form" action = "LogoutServlet" method = "POST">
+            <input type="submit" value = "LogOut">
+            </form>
         </div>
         
          <div id = "profile">
