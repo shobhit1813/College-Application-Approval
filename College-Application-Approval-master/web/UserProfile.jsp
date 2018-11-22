@@ -1,6 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%
-   response.setHeader("Cache-Control","no-store,no-cache,must-revalidate"); //HTTP 1.1 
+  
  
    
    if(session.getAttribute("nm") == null){
@@ -104,7 +104,7 @@ img{
     <body>
         <div class = "topnav">
             <a class="active">Home</a>
-            <a href =" ">Applied for</a>
+            <a href ="Apply.html">Applied for</a>
             <a href =" ">Counseling</a>
             <a href ="UserProfile.jsp">Back</a>
         </div>
