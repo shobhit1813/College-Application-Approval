@@ -38,7 +38,6 @@ public class LogoutServlet extends HttpServlet {
        RequestDispatcher rd = request.getRequestDispatcher("/login.html");
        rd.forward(request,response);
        
-       
     }
 
      // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -11,137 +11,129 @@
    if(nsession != null){
       
         %>
-<html>
-    <head>
-        <title>TODO supply a title</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <style>
-        .tb{
-            
-        }
-        #a{
-             text-decoration: none;
-             width:100px;
-        }
-        body{
-            background-image:url("pers.jpeg");
-            background-size: 1400px 800px;
-            
-        }
-        #user{
-            width:350px;
-            margin-top:20px;
-            margin-left:600px;
-            height:500px;
-            background-image: linear-gradient(50deg,white,black);
-            box-shadow: 5px 5px black;
-        }
-        #profile{
-            float:left;
-            margin-top:20px;
-            margin-left:300px;
-            width:300px;
-            height:500px;
-            background-image: url("divuser.jpg");
-            background-size: 300px 500px;
-             box-shadow: 0px 5px #4d4d4d;
-        }
-   
- 
-.topnav {
-  overflow: hidden;
-  background-color: black;
-  margin-top:-10px;
-  margin-left:  -8px;
-  width:100vw;
-  opacity:0.7;
-}
-
-.topnav a {
-  float: left;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  font-size: 17px;
-}
-
-.topnav a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
-.topnav a.active {
-  background-color: greenyellow;
-  color: brown;
-}
-#user font.username{
-    font-family: "Times Header";
-    margin-top:20px;
-    margin-left:100px;
-    font-size:30px; 
-}
-#user.username font.usename_in{
-    margin-left: 1000px;
-}
-#avtardiv{
-    border-radius: 100%;
-    background-color: yellow;
-    background-size: 30px 30px;
-}
-img{
-    border-radius:25%;
-    margin-left: 50px;
-    margin-top: 100px;
-}
-.usename_in{
-    top: -40;
-    margin-top: 100px;
-}
-.user{
-    margin-left: 1200px;
-}
-form{
-    margin-left:1270px;
-    margin-top: -40px;
-}
-    </style>
-    <body>
-        <div class = "topnav">
-            <a class="active">Home</a>
-            <a href ="Apply.html">Applied for</a>
-            <a href =" ">Counseling</a>
-            <a href ="UserProfile.jsp">Back</a>
-            <p class = "user"><font color="red"><%= 
-                request.getSession().getAttribute("nm").toString()
-                %></font></p>
-            <form  id = "form" action = "LogoutServlet" method = "POST">
-            <input type="submit" value = "LogOut">
-            </form>
-        </div>
-        
-         <div id = "profile">
-             <img src = "shobhit.jpg" style="width:200px">
-             <font class = "username">
-         </div>
-        <div id = "user">
-            <table class = "tb"> 
-               <tr>
-                   <td>     
-                        <p class ="username_in" text> <%=
-                                     request.getSession().getAttribute("nm").toString()
-                                 %>
-                        </p>
-                   </td>             
-                </tr>    
-                </p>
-           </table>
-        </div>
-
-    </body>
-</html>
+        <html>
+            <head>
+                <title>Profile Page</title>
+                <style>
+                    body{
+                        margin:0;
+                        padding:0;
+                        background: url("edu6.jpeg");
+                        background-size: cover;
+                        font-family: sans-serif;   
+                    }
+                    .title{
+                        text-align: center;
+                        padding: 50px 0 20px;
+                    }
+                    .title h1{
+                        margin: 0;
+                        padding: 0;
+                        color: #262626;
+                        text-transform: uppercase;
+                        font-size: 36px;
+                    }
+                    .container{
+                        width: 50%;
+                        height: 400px;
+                        background-color: #fff;
+                        margin: 0 auto;
+                        border: 2px solid #fff;
+                        box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+                    }
+                    .container .left{
+                        float:left;
+                        width: 50%;
+                        height: 400px;
+                        background: url("profilr.jpg");
+                        background-size: 300px 400px;
+                        
+                    }
+                    .container .right{
+                        float:right;
+                        width: 50%;
+                        height: 400px;
+                        background-size: cover;
+                        box-sizing: border-box;
+                    }
+                    .infoBox{
+                        width:100%;
+                        padding: 80px 40px;
+                        box-sizing: border-box;
+                        height: 400px;
+                        background: #fff;
+                    }   
+                    
+                    .infoBox p{
+                        margin:0;
+                        padding: 0;
+                        font-weight: bold;
+                        color: #a6af13;
+                    }
+                    .infoBox input{
+                        width: 100%;
+                        margin-bottom: 20px;
+                        
+                    }
+                    .infoBox input[type = "text"]{
+                        border: none;
+                        border-bottom: 2px solid #a6af13;
+                        outline: none;
+                        height:40px;
+                    }
+                    .infoBox input[type = "text"]:focus{
+                        border-bottom: 2px solid #262626;
+                    }
+                    .infoBox input[type = "submit"]{
+                        border:none;
+                        outline: none;
+                        height: 40px;
+                        color: #fff;
+                        background:#262626;
+                        cursor: pointer;
+                    }
+                    .infoBox input[type = "submit"]:hover{
+                     background: #a6af13;   
+                    }
+                    .infobox 
+                    {
+                        color: #262626;
+                        font-size: 12px;
+                        font-weight: bold;
+                    }
+                    .image{
+                        border-radius: 50%;
+                        background-color:white;
+                    }
+                    
+                    
+                </style>
+            </head>
+                <div class = "title">
+                    <h1><font style="color:#a6af13">Profile Info</h1>
+                </div>
+                <div class = "container">
+                    <div class = "left">
+                        <div class = "image">
+                            
+                        </div>
+                    </div>
+                    <div class = "right">
+                        <div class = "infoBox">
+                            <form>
+                                <p>UserName</p>
+                                <input type = "text" value = <%= request.getSession().getAttribute("nm").toString()
+                                       %>>
+                                <p>10th CGPA</p>
+                                <input type="text"value = >
+                                <p>12th Percentage</p>
+                                <input type = "text">
+                                <form action="LogoutServlet" method ="post"><input type = "submit" value="LogOut"></form>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+        </html>
 <%}
  
 %>
