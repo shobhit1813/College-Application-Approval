@@ -92,6 +92,15 @@
                         background:#262626;
                         cursor: pointer;
                     }
+                    
+                    .content {
+                       overflow: hidden;
+                       background-color: black;
+                       margin-top:-10px;
+                       margin-left:  -8px;
+                       opacity:0.7;
+                       height: 60px;
+                }
                     .infoBox input[type = "submit"]:hover{
                      background: #a6af13;   
                     }
@@ -101,14 +110,45 @@
                         font-size: 12px;
                         font-weight: bold;
                     }
-                    .image{
+                    .image{  
+                        display: inline-block;
+                        width: 150px;
+                        height: 150px;
+                        margin-left: 100px;
+                        margin-top: 100px;
                         border-radius: 50%;
-                        background-color:white;
+                        background: url("shobhit.jpg");
+                        background-repeat: no-repeat;
+                        background-position: center center;
+                        background-size: cover;
                     }
-                    
+                    .content a {
+                        float: left;
+                        color: #f2f2f2;
+                        text-align: center;
+                        padding: 20px 16px;
+                        text-decoration: none;
+                        font-size: 17px;
+                    }
+
+                    .content a:hover {
+                      background-color: #ddd;
+                      color: black;
+                    }
+
+                    .content a.active {
+                      background-color: greenyellow;
+                      color: brown;
+                    }
                     
                 </style>
             </head>
+            <div class="content">
+                  <a href="home.html" class = "active">Home</a>
+                  <a href="Apply.html">Status</a>
+                  <a href="home.html">Counseling</a>
+                  <a href="feedback.html">Feedback</a>
+            </div>
                 <div class = "title">
                     <h1><font style="color:#a6af13">Profile Info</h1>
                 </div>
