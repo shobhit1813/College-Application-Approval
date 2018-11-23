@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>TODO supply a title</title>
+        <title>Apply</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
@@ -115,6 +115,23 @@
             }
                       
         </style>
+        <script>
+            function checkiitbhustatus(){
+                window.location = "iit-bhuStatus.jsp";
+                document.requestForm.submit();
+
+            }
+            
+            function checkiitbombaystatus(){
+                
+            }
+            function checkiitkharagpurstatus(){
+                
+            }
+            function checkiitdelhistatus(){
+                
+            }
+            </script>
     </head>
     <body>
         <div class = "topnav">
@@ -124,29 +141,25 @@
             <a href ="feedback.html">Feedback</a>
         </div>    
     <div class ="main">
-        <a href = "http://www.iitd.ac.in/">
-                <div class = "divSquare-tl" >
+            <form name = "iitbh" method = "post">
+                <div class = "divSquare-tl" onclick = "checkiitbhustatus()">
                     
                 </div>
-        </a>
-        <a href = "http://www.iitb.ac.in/">
+            </form>
+    
                 <div class ="divSquare-tr">
                     
                 </div>
-        </a>
+ 
         
             
-        <div style='clear:both'></div>
-        <a href = "https://www.iitbhu.ac.in/">    
+        <div style='clear:both'></div>    
                 <div class = "divSquare-dl">
 
                 </div>
-        </a>
-        <a href = "http://www.iitd.ac.in/">
                 <div class ="divSquare-dr">
 
                 </div>
-        </a>   
     </div>       
     </body>
 </html>

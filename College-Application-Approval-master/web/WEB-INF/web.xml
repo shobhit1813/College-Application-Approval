@@ -43,6 +43,30 @@
         <servlet-name>passChangeServlet</servlet-name>
         <servlet-class>Controller.passChangeServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>StatusServlet</servlet-name>
+        <servlet-class>Controller.StatusServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>iitbServlet</servlet-name>
+        <servlet-class>Controller.iitbServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>iit_bServlet</servlet-name>
+        <servlet-class>Controller.iit_bServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>iit_dServlet</servlet-name>
+        <servlet-class>Controller.iit_dServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>iit_kServlet</servlet-name>
+        <servlet-class>Controller.iit_kServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>iit_bhuServlet</servlet-name>
+        <servlet-class>Controller.iit_bhuServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -82,6 +106,30 @@
     <servlet-mapping>
         <servlet-name>passChangeServlet</servlet-name>
         <url-pattern>/passChangeServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>StatusServlet</servlet-name>
+        <url-pattern>/StatusServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>iitbServlet</servlet-name>
+        <url-pattern>/iitbServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>iit_bServlet</servlet-name>
+        <url-pattern>/iit_bServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>iit_dServlet</servlet-name>
+        <url-pattern>/iit_dServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>iit_kServlet</servlet-name>
+        <url-pattern>/iit_kServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>iit_bhuServlet</servlet-name>
+        <url-pattern>/iit_bhuServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
