@@ -4,15 +4,18 @@
  * and open the template in the editor.
  */
 package Controller;
-import Modal.LoginDao;
+
+import Modal.LoginDAO;
+import Modal.Loginpojo;
 import java.io.IOException;
 import java.io.PrintWriter;
+import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
-import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+
 
 /**
  *
@@ -33,19 +36,22 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
        PrintWriter out = response.getWriter();//PrintWriter object is created by web Container.
-      
+       
        String n = request.getParameter("nm");
        String p = request.getParameter("pwd");
-      
-       if(LoginDao.validate(n,p)){
-           
+       Loginpojo l = new Loginpojo(n,p);
+           System.out.println("before");
+           LoginDAO o = new LoginDAO();
+       if(o.search(l)){
+           System.out.println("yes");
            HttpSession  session = request.getSession();
            session.setAttribute("nm", n);
            
-          RequestDispatcher rd = request.getRequestDispatcher("UserProfile.jsp");
+          RequestDispatcher rd = request.getRequestDispatcher("/UserProfile.jsp");
           rd.forward(request, response); 
         }
        else{
+            System.out.println("yes");
            out.print("Sorry username or password wrong");
           
        }
