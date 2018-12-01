@@ -12,7 +12,7 @@ import javax.mail.MessagingException;
  *
  * @author shobhit
  */
-public class EmailHandler {
+public class EmailHandler { 
     
     final static String from = "ssinha.cse16@chitkarauniversity.edu.in";
     static String to = " ";

@@ -16,37 +16,41 @@
         <title>IIT-BHU SCHOLARSHIP STATUS</title>
         
         <style>
-            
-            .tbh{
-               
-                width: 400px;
-                height:400px;
-                margin-top: 60px;
-                margin-left: 400px;
-                font-family: sans-serif;
-                color: black;
-            }
-            
-            .div{
-                background-color: #a6af13;
-                width: 400px;
-                margin-left: 400px;
-                opacity: 0.6;
-            }
-            
-            
             body{
-                background-image: url("siitbh.jpg");
-                background-size: cover;
+               background: url("edu5.jpeg");
             }
-            
-        </style>
+           
+#customers {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 50%;
+}
+
+#customers td, #customers th {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #4CAF50;
+    color: white;
+}
+
+</style>
+
     </head>
     
     <body bgcolor = black> 
         <p><font color = grey>IIT_BHU Scholarship Criteria</font></p>
           <div class = "div">
-            <table name = "scholar" class = "tbh" >
+            <table name = "scholar" id = "customers" >
                 <tr>
                 <% 
                     String name = request.getSession().getAttribute("nm").toString();

@@ -84,7 +84,7 @@
                     .infoBox input[type = "text"]:focus{
                         border-bottom: 2px solid #262626;
                     }
-                    .infoBox input[type = "submit"]{
+                    .infoBox input[type = "button"]{
                         border:none;
                         outline: none;
                         height: 40px;
@@ -101,7 +101,7 @@
                        opacity:0.7;
                        height: 60px;
                 }
-                    .infoBox input[type = "submit"]:hover{
+                    .infoBox input[type = "button"]:hover{
                      background: #a6af13;   
                     }
                     .infobox 
@@ -165,10 +165,10 @@
                                 <input type = "text" value = <%= request.getSession().getAttribute("nm").toString()
                                        %>>
                                 <p>10th CGPA</p>
-                                <input type="text"value = >
+                                <input type="text"value = "9.2">
                                 <p>12th Percentage</p>
-                                <input type = "text">
-                                <form action="LogoutServlet" method ="post"><input type = "submit" value="LogOut"></form>
+                                <input type = "text" value="89">
+                                <a href="login.html"><input type = "button" value="LogOut"></a>
                             </form>
                         </div>
                     </div>

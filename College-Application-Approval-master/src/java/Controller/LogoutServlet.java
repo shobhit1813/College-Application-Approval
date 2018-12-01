@@ -32,8 +32,8 @@ public class LogoutServlet extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       System.out.println("heheh");
        HttpSession csession = request.getSession(false);
+       csession.removeAttribute("uname");
        csession.invalidate();
        RequestDispatcher rd = request.getRequestDispatcher("/login.html");
        rd.forward(request,response);
