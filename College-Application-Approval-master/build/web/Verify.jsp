@@ -95,7 +95,7 @@ h1{
 }
 body{
     background-image: url('edu6.jpeg');
-    background-size: 1400px 900px;
+    background-size: cover;
 }    
 .change{
     font-family: sans-serif;

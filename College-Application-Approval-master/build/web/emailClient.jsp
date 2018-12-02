@@ -11,7 +11,7 @@ and open the template in the editor.
       
         body{
             background-image: url('verify.jpeg');
-            background-size: 1400px 700px;  
+            background-size: cover;  
         }
 .loginbox{
     width: 320px;
