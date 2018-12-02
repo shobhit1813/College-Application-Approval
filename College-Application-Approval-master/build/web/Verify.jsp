@@ -13,7 +13,7 @@ and open the template in the editor.
     <style>
        
 .loginbox{
-    width: 320px;
+    width: 420px;
     height: 420px;
     background: #000;
     color: #fff;

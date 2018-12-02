@@ -75,7 +75,7 @@
                <p>UserName</p>
                <input type="text" name = "usnm" id = "un" value = <% out.print(request.getAttribute("Username")); %>>
                 <p>Father's Name</p>
-                <input type="text" name="ftnm" placeholder="Enter Username" required>
+                <input type="text" name="ftnm" placeholder="Enter Father's Name" required>
                 <p>Father's occupation</p> 
                <select name = "ftoccp">
                     <option value = "Business">Business</option>
