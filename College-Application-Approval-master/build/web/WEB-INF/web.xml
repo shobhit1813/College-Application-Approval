@@ -79,6 +79,10 @@
         <servlet-name>addCounslServlet</servlet-name>
         <servlet-class>Controller.addCounslServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addScholarServlet</servlet-name>
+        <servlet-class>Controller.addScholarServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -154,6 +158,10 @@
     <servlet-mapping>
         <servlet-name>addCounslServlet</servlet-name>
         <url-pattern>/addCounslServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addScholarServlet</servlet-name>
+        <url-pattern>/addScholarServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

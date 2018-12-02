@@ -116,6 +116,11 @@ h1{
             
             window.location = "adminCounsl.html";
         }
+        
+        function setScholarship(){
+            
+            window.location = "adminScholarship.html";
+        }
         </script>
     <body>
            <div class="loginbox">
@@ -131,7 +136,7 @@ h1{
                         <input type = "submit" value = "CHECK REGISTRATIONS">
                     
                     
-                        <input type = "submit" value = "SET SCHOLARSHIP">
+                        <input type = "submit" value = "SET SCHOLARSHIP" onclick = "setScholarship()">
                     <form  action = "LogoutServlet" method = "post">
                          <input type = "submit" value = "LOGOUT">
                     </form>

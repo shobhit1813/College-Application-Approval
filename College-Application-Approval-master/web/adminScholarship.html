@@ -1,15 +1,8 @@
-<%-- 
-    Document   : adminPortal
-    Created on : Dec 2, 2018, 12:38:53 PM
-    Author     : shobhit
---%>
-
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>ADMIN PORTAL</title>
+        <title>ADD SCHOLARSHIP INFO</title>
     <style>
         body{
             margin: 0;
@@ -22,8 +15,8 @@
 }
 
 .loginbox{
-    width: 320px;
-    height: 420px;
+    width: 420px;
+    height: 520px;
     background: #000;
     color: #fff;
     top: 50%;
@@ -107,38 +100,22 @@ h1{
 
         </style>
     </head>
-    <script>
-        function addColg(){
-            
-            window.location = "adminAddColg.html";
-        }
-        function addCounsl(){
-            
-            window.location = "adminCounsl.html";
-        }
-        
-        function setScholarship(){
-            
-            window.location = "adminScholarship.html";
-        }
-        </script>
+    
     <body>
            <div class="loginbox">
                 <img src="avatar.png" class="avatar">
-                    <h1>MANAGE HERE</h1>
-                    
-                        <input type = "submit" value = "ADD COLLEGE" onclick = "addColg()">
-                    
-                    
-                        <input type = "submit" value = "COUNSELLING DATES" onclick = "addCounsl()">
-                    
-                    
-                        <input type = "submit" value = "CHECK REGISTRATIONS">
-                    
-                    
-                        <input type = "submit" value = "SET SCHOLARSHIP" onclick = "setScholarship()">
-                    <form  action = "LogoutServlet" method = "post">
-                         <input type = "submit" value = "LOGOUT">
+                    <h1>ADD COUNSELLING</h1>
+                    <form action = "addScholarServlet" method = "post">
+                      <p>College Name</p>
+                      <input type = "text" name = "colgnm" placeholder = "Enter College">
+                      <br>
+                      <p>Scholarship</p>
+                      <input type = "text" name = "sch" placeholder = "Scholarship Amount">
+                      
+                      <p>Marks for Scholarship</p>
+                      <input type = "text" name = "marks" placeholder = "Enter Marks">
+                       
+                      <input type = "submit" value = "ADD Criteria">
                     </form>
 
             </div>
