@@ -5,23 +5,22 @@
  */
 package Controller;
 
-import Modal.LoginDAO;
-import Modal.Loginpojo;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-
 
 /**
  *
  * @author shobhit
  */
-public class Login extends HttpServlet {
+public class addColgServlet extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -35,39 +34,40 @@ public class Login extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-       PrintWriter out = response.getWriter();//PrintWriter object is created by web Container.
-       boolean adminflag = false;
-       String n = request.getParameter("nm");
-       String p = request.getParameter("pwd");
-       if(n.equals("admin")){
-           adminflag = true;
-       };
-       
-       Loginpojo l = new Loginpojo(n,p);
-           System.out.println("before");
-           LoginDAO o = new LoginDAO();
-       if(o.search(l)){
-           System.out.println("hahahahah");
-           System.out.println("yes");
-           HttpSession  session = request.getSession();
-           session.setAttribute("nm", n);
-           if(adminflag){
-                RequestDispatcher rd = request.getRequestDispatcher("/adminPortal.jsp");
-                rd.forward(request, response); 
-           }
-           else{
-                RequestDispatcher rd = request.getRequestDispatcher("/UserProfile.jsp");
-                rd.forward(request, response); 
+         PrintWriter out = response.getWriter();
+        
+        String cn = request.getParameter("colgnm");
+        String min = request.getParameter("min");
+        String max = request.getParameter("max");
+        String city = request.getParameter("city");
+        
+        try{
+
+            
+           Class.forName("com.mysql.cj.jdbc.Driver");
+           Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
+            PreparedStatement ps = con.prepareStatement("insert into collg_info values(?,?,?,?)");
+            ps.setString(1,cn);
+            ps.setString(2,min);
+            ps.setString(3,max);
+            ps.setString(4,city);
+            
+            int i = ps.executeUpdate();
+            //System.out.println("shobhit");
+            if(i > 0)
+            {
                 
-           }
+                RequestDispatcher rd = request.getRequestDispatcher("/adminPortal.jsp");
+                 rd.forward(request, response);
+            }
+            
         }
-       else{
-            System.out.println("yes");
-           out.print("Sorry username or password wrong");
-          
-       }
-       adminflag = false;
-   }     
+        catch(Exception ex){
+            System.out.print(ex);
+        }
+        out.close();
+    }
+
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
      * Handles the HTTP <code>GET</code> method.

@@ -107,23 +107,28 @@ h1{
 
         </style>
     </head>
-    
+    <script>
+        function addColg(){
+            
+            window.location = "adminAddColg.html";
+        }
+        </script>
     <body>
            <div class="loginbox">
                 <img src="avatar.png" class="avatar">
                     <h1>MANAGE HERE</h1>
-                    <form action = "addColgServlet" method = "post">
-                        <input type = "submit" value = "ADD COLLEGE">
-                    </form>   
-                     <form action = "adminCounselling" method = "post">
+                    
+                        <input type = "submit" value = "ADD COLLEGE" onclick = "addColg()">
+                    
+                    
                         <input type = "submit" value = "COUNSELLING DATES">
-                    </form>   
-                    <form action = "addColgServlet" method = "post">
+                    
+                    
                         <input type = "submit" value = "CHECK REGISTRATIONS">
-                    </form>   
-                    <form action = "adminScholarship" method = "post">
+                    
+                    
                         <input type = "submit" value = "SET SCHOLARSHIP">
-                    </form>   
+                    
                         
                     </form>
 

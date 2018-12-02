@@ -71,6 +71,10 @@
         <servlet-name>feedbackServlet</servlet-name>
         <servlet-class>Controller.feedbackServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addColgServlet</servlet-name>
+        <servlet-class>Controller.addColgServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -138,6 +142,10 @@
     <servlet-mapping>
         <servlet-name>feedbackServlet</servlet-name>
         <url-pattern>/feedbackServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addColgServlet</servlet-name>
+        <url-pattern>/addColgServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
