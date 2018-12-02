@@ -3,17 +3,15 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/adminAddColg.html</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/login.html</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/adminScholarship.html</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/personal_Detail.jsp</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/iit-kharagpur.jsp</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/src/java/Controller/Registration.java</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/Verify.jsp</file>
             <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/adminPortal.jsp</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/iit-bhuStatus.jsp</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/src/java/Controller/LogoutServlet.java</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/src/java/Controller/Login.java</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/src/java/Controller/addColgServlet.java</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/login.css</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/src/java/Modal/EmailHandler.java</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/UserProfile.jsp</file>
-            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/src/java/Controller/feedbackServlet.java</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/Registration.html</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/reg.css</file>
+            <file>file:/home/shobhit/NetBeansProjects/College%20Application%20Approval/College-Application-Approval-master/web/adminRegister.jsp</file>
         </group>
     </open-files>
 </project-private>

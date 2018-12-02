@@ -113,27 +113,30 @@
               background-size: 300px 200px;
               height:200px;
             }
+            #couns{
+               margin-left: 1000px; 
+            }
                       
         </style>
         <script>
-            function checkiitbhustatus(){
-                window.location = "iit-bhuStatus.jsp";
+            function checkiitbhuCouns(){
+                window.location = "iit-bhuCouns.jsp";
                 document.requestForm.submit();
 
             }
             
-            function checkiitbombaystatus(){
-                window.location = "iit-bombay.jsp";
+            function checkiitbombayCouns(){
+                window.location = "iit-bombayCouns.jsp";
                 document.requestForm.submit();
   
             }
-            function checkiitkharagpurstatus(){
-                window.location = "iit-kharagpur.jsp";
+            function checkiitkharagpurCouns(){
+                window.location = "iit-kharagpurCouns.jsp";
                 document.requestForm.submit();
  
             }
-            function checkiitdelhistatus(){
-                 window.location = "iit-delhi.jsp";
+            function checkiitdelhiCouns(){
+                 window.location = "iit-delhiCouns.jsp";
                 document.requestForm.submit();
             }
             </script>
@@ -141,29 +144,29 @@
     <body>
         <div class = "topnav">
             <a class=" " href ="UserProfile.jsp">Home</a>
-            <a href =" " class = "active">Status</a>
-            <a href ="Counselling.html">Counseling</a>
+            <a href = "Apply.html" >Status</a>
+            <a href =" "class = "active">Counseling</a>
             <a href ="feedback.html">Feedback</a>
         </div>    
     <div class ="main">
-        <p id = "cons"><font color = white><h1>SCHOLARSHIP COLLEGES</h1></font></p>
+        <p id = "cons"><font color = white><h1>COUNSELLING COLLEGES</h1></font></p>
             <form name = "iitbh" method = "post">
-                <div class = "divSquare-tl" onclick = "checkiitbhustatus()">
+                <div class = "divSquare-tl" onclick = "checkiitbhuCouns()">
                     
                 </div>
             </form>
     
-                <div class ="divSquare-tr" onclick = "checkiitkharagpurstatus()">
+                <div class ="divSquare-tr" onclick = "checkiitkharagpurCouns()">
                     
                 </div>
  
         
             
         <div style='clear:both'></div>    
-                <div class = "divSquare-dl" onclick = "checkiitbombaystatus()">
+                <div class = "divSquare-dl" onclick = "checkiitbombayCouns()">
 
                 </div>
-                <div class ="divSquare-dr" onclick = "checkiitdelhistatus()">
+                <div class ="divSquare-dr" onclick = "checkiitdelhiCouns()">
 
                 </div>
     </div>       

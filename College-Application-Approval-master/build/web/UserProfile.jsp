@@ -146,7 +146,7 @@
             <div class="content">
                   <a href="home.html" class = "active">Home</a>
                   <a href="Apply.html">Status</a>
-                  <a href="home.html">Counseling</a>
+                  <a href="Counselling.html">Counseling</a>
                   <a href="feedback.html">Feedback</a>
             </div>
                 <div class = "title">
