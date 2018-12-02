@@ -67,6 +67,10 @@
         <servlet-name>iit_bhuServlet</servlet-name>
         <servlet-class>Controller.iit_bhuServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>feedbackServlet</servlet-name>
+        <servlet-class>Controller.feedbackServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -130,6 +134,10 @@
     <servlet-mapping>
         <servlet-name>iit_bhuServlet</servlet-name>
         <url-pattern>/iit_bhuServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>feedbackServlet</servlet-name>
+        <url-pattern>/feedbackServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
