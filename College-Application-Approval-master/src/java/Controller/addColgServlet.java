@@ -56,7 +56,6 @@ public class addColgServlet extends HttpServlet {
             //System.out.println("shobhit");
             if(i > 0)
             {
-                
                 RequestDispatcher rd = request.getRequestDispatcher("/adminPortal.jsp");
                  rd.forward(request, response);
             }

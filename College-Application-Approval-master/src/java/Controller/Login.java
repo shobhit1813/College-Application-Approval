@@ -47,8 +47,7 @@ public class Login extends HttpServlet {
            System.out.println("before");
            LoginDAO o = new LoginDAO();
        if(o.search(l)){
-           System.out.println("hahahahah");
-           System.out.println("yes");
+           
            HttpSession  session = request.getSession();
            session.setAttribute("nm", n);
            if(adminflag){
