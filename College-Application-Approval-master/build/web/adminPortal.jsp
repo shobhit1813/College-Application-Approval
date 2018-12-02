@@ -112,6 +112,10 @@ h1{
             
             window.location = "adminAddColg.html";
         }
+        function addCounsl(){
+            
+            window.location = "adminCounsl.html";
+        }
         </script>
     <body>
            <div class="loginbox">
@@ -121,15 +125,15 @@ h1{
                         <input type = "submit" value = "ADD COLLEGE" onclick = "addColg()">
                     
                     
-                        <input type = "submit" value = "COUNSELLING DATES">
+                        <input type = "submit" value = "COUNSELLING DATES" onclick = "addCounsl()">
                     
                     
                         <input type = "submit" value = "CHECK REGISTRATIONS">
                     
                     
                         <input type = "submit" value = "SET SCHOLARSHIP">
-                    
-                        
+                    <form  action = "LogoutServlet" method = "post">
+                         <input type = "submit" value = "LOGOUT">
                     </form>
 
             </div>

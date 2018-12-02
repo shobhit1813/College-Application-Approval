@@ -75,6 +75,10 @@
         <servlet-name>addColgServlet</servlet-name>
         <servlet-class>Controller.addColgServlet</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>addCounslServlet</servlet-name>
+        <servlet-class>Controller.addCounslServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>Login</servlet-name>
         <url-pattern>/Login</url-pattern>
@@ -146,6 +150,10 @@
     <servlet-mapping>
         <servlet-name>addColgServlet</servlet-name>
         <url-pattern>/addColgServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addCounslServlet</servlet-name>
+        <url-pattern>/addCounslServlet</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
