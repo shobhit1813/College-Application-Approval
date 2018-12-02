@@ -17,13 +17,16 @@
         
         <style>
             body{
-               background: url("edu5.jpeg");
+               background: url("edu5.jpg");
+               background-size: cover;
             }
            
 #customers {
     font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
     border-collapse: collapse;
     width: 50%;
+    margin-left: 500px;
+    margin-top: 200px;
 }
 
 #customers td, #customers th {
@@ -40,7 +43,7 @@
     padding-bottom: 12px;
     text-align: left;
     background-color: #4CAF50;
-    color: white;
+    color: grey;
 }
 
 </style>
@@ -48,9 +51,13 @@
     </head>
     
     <body bgcolor = black> 
-        <p><font color = grey>IIT_BHU Scholarship Criteria</font></p>
+        <p><h1><center><font color = green>IIT_BHU Scholarship Criteria</font></center></h1></p>
           <div class = "div">
             <table name = "scholar" id = "customers" >
+                <tr>
+                    <th><font color = red>Scholarship</font></th>
+                    <th><font color = red>Percentage</font></th>
+                </tr>
                 <tr>
                 <% 
                     String name = request.getSession().getAttribute("nm").toString();
