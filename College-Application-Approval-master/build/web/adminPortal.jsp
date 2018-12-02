@@ -121,6 +121,9 @@ h1{
             
             window.location = "adminScholarship.html";
         }
+        function checkRegisteration(){
+            window.location = "adminRegister.jsp";
+        }
         </script>
     <body>
            <div class="loginbox">
@@ -133,7 +136,7 @@ h1{
                         <input type = "submit" value = "COUNSELLING DATES" onclick = "addCounsl()">
                     
                     
-                        <input type = "submit" value = "CHECK REGISTRATIONS">
+                        <input type = "submit" value = "CHECK REGISTRATIONS" onclick = "checkRegisteration()">
                     
                     
                         <input type = "submit" value = "SET SCHOLARSHIP" onclick = "setScholarship()">
