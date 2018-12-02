@@ -1,8 +1,9 @@
 <%-- 
-    Document   : iit-bombay
-    Created on : Dec 2, 2018, 11:41:50 AM
+    Document   : iit-delhi
+    Created on : Dec 2, 2018, 11:49:33 AM
     Author     : shobhit
 --%>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <%-- 
@@ -20,7 +21,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>IIT-BOMBAY SCHOLARSHIP STATUS</title>
+        <title>IIT-DELHI SCHOLARSHIP STATUS</title>
         
         <style>
             body{
@@ -58,7 +59,7 @@
     </head>
     
     <body bgcolor = black> 
-        <p><h1><center><font color = green>IIT_BOMBAY Scholarship Criteria</font></center></h1></p>
+        <p><h1><center><font color = green>IIT_DELHI Scholarship Criteria</font></center></h1></p>
           <div class = "div">
             <table name = "scholar" id = "customers" >
                 <tr>
@@ -73,7 +74,7 @@
                 Class.forName("com.mysql.cj.jdbc.Driver");
                 Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/register?useSSL=true&verifyServerCertificate=false&allowMultiQueries=true","root","1810");
                 PreparedStatement ps = con.prepareStatement("select * from scholarship where collg_name = ?");
-                ps.setString(1,"IIT-BOMBAY");
+                ps.setString(1,"IIT-DELHI");
                 ResultSet rs = ps.executeQuery();
                 
                 while(rs.next()){

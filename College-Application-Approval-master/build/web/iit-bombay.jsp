@@ -20,7 +20,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>IIT-KHARAGPUR SCHOLARSHIP STATUS</title>
+        <title>IIT-BOMBAY SCHOLARSHIP STATUS</title>
         
         <style>
             body{
