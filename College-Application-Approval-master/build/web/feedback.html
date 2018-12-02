@@ -10,21 +10,119 @@ and open the template in the editor.
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            body{
-                background-image: url("feedback.jpg");
-                background-size: cover;
-            }
+           
+ body{
+    margin: 0;
+    padding: 0;
+    background-image: url("feedback.jpg");
+    background-size: cover;
+
+    font-family: sans-serif;
+    
+}
+
+.loginbox{
+    width: 320px;
+    height: 420px;
+    background: #000;
+    color: #fff;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    box-sizing: border-box;
+    padding: 70px 30px;
+    opacity: 0.7;
+    border-radius:30px;
+        
+        
+}
+
+.avatar{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px;
+    left: calc(50% - 50px);
+}
+
+h1{
+    margin: 0;
+    padding: 0 0 20px;
+    text-align: center;
+    font-size: 22px;
+}
+
+.loginbox p{
+    margin: 0;
+    padding: 0;
+    font-weight: bold;
+}
+
+.loginbox input{
+    width: 100%;
+    margin-bottom: 20px;
+}
+.loginbox textarea{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type="text"]
+{
+    border: none;
+    border-bottom: 1px solid #fff;
+    background: transparent;
+    outline: none;
+    height: 40px;
+    color: #fff;
+    font-size: 16px;
+}
+.loginbox input[type="submit"]
+{
+    border: none;
+    outline: none;
+    height: 40px;
+    background: #fb2525;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 20px;
+}
+.loginbox input[type="submit"]:hover
+{
+    cursor: pointer;
+    background: #ffc107;
+    color: #000;
+}
+.loginbox a{
+    text-decoration: none;
+    font-size: 12px;
+    line-height: 20px;
+    color: darkgrey;
+}
+
+.loginbox a:hover
+{
+    color: #ffc107;
+}
         </style>
             
     </head>
     <body>
-        <div>
+        <div class = "loginbox">
             <center><h1><font color = yellow>FEEDBACK FORM</font></h1></center>
-            <table>
-                <tr>
-                    
-                </tr>
-            </table>
+           <form action = "feedbackServlet" method = "post"> 
+                <p>Username</p>
+                <input type="text" name="nm" placeholder="Enter Username" required>
+                <p>Comments</p>
+                <textarea row = "4" cols = "25"name="cmnt" placeholder="Enter Comment" required></textarea><br>
+                <input type="submit"  value="Submit">
+             </form>  
         </div>
     </body>
 </html>
