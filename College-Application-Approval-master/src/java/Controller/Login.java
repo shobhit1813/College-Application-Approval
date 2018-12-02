@@ -36,25 +36,37 @@ public class Login extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
        PrintWriter out = response.getWriter();//PrintWriter object is created by web Container.
-       
+       boolean adminflag = false;
        String n = request.getParameter("nm");
        String p = request.getParameter("pwd");
+       if(n.equals("admin")){
+           adminflag = true;
+       };
+       
        Loginpojo l = new Loginpojo(n,p);
            System.out.println("before");
            LoginDAO o = new LoginDAO();
        if(o.search(l)){
+           
            System.out.println("yes");
            HttpSession  session = request.getSession();
            session.setAttribute("nm", n);
-           
-          RequestDispatcher rd = request.getRequestDispatcher("/UserProfile.jsp");
-          rd.forward(request, response); 
+           if(adminflag){
+                RequestDispatcher rd = request.getRequestDispatcher("/adminPortal.jsp");
+                rd.forward(request, response); 
+           }
+           else{
+                RequestDispatcher rd = request.getRequestDispatcher("/UserProfile.jsp");
+                rd.forward(request, response); 
+                
+           }
         }
        else{
             System.out.println("yes");
            out.print("Sorry username or password wrong");
           
        }
+       adminflag = false;
    }     
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
